@@ -26,49 +26,6 @@ data class ItemType (
     val price: String
 )
 
-//type to database
-fun List<KitType>.asDatabaseKitType(): List<DatabaseKitType> {
-    return map {
-        DatabaseKitType(
-            id = it.id,
-            name = it.name,
-            imgSrcUrl = it.imgSrcUrl,
-            description = it.description,
-            price = it.price
-        )
-    }
-}
-fun List<ItemType>.asDatabaseItemType1(): List<DatabaseItemType1> {
-    return map {
-        DatabaseItemType1(
-            id = it.id,
-            name = it.name,
-            imgSrcUrl = it.imgSrcUrl,
-            price = it.price
-        )
-    }
-}
-fun List<ItemType>.asDatabaseItemType2(): List<DatabaseItemType2> {
-    return map {
-        DatabaseItemType2(
-            id = it.id,
-            name = it.name,
-            imgSrcUrl = it.imgSrcUrl,
-            price = it.price
-        )
-    }
-}
-fun List<ItemType>.asDatabaseItemType3(): List<DatabaseItemType3> {
-    return map {
-        DatabaseItemType3(
-            id = it.id,
-            name = it.name,
-            imgSrcUrl = it.imgSrcUrl,
-            price = it.price
-        )
-    }
-}
-
 //for database to model(domain)
 fun List<DatabaseKitType>.asDomainKitTypeModel(): List<KitTypeModel> {
     return map {
