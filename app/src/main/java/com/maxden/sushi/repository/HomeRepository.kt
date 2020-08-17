@@ -2,10 +2,10 @@ package com.maxden.sushi.repository
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Transformations
-import com.maxden.sushi.database.User
 import com.maxden.sushi.database.Databases
+import com.maxden.sushi.database.User
 import com.maxden.sushi.model.UserModel
-import com.maxden.sushi.network.*
+import com.maxden.sushi.network.asDomainUserModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
@@ -22,33 +22,33 @@ class HomeRepository(private val database: Databases) {
 
             val user1 = User(
                 "1",
-                "Drafter1",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSg3oxXxnbGRC3p7IjejzvQQI8RRk7UkVSMJkOuhR922AmVJAbN&usqp=CAU"
+                "Mike",
+                "https://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252913User1.png"
             )
             val user2 = User(
                 "2",
-                "Drafter2",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQIZWBsk38xkCleyWVIH0swFMqCMa8GOAbECSl2zMbTVNScagQObmRQOI-gSw&usqp=CAc"
+                "Jane",
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGanxUkDEQCdgSatiOCehm8zfbt4SmcUjiKx8L45vltShvwd4u&s"
             )
             val user3 = User(
                 "3",
-                "Drafter3",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBdGFqF9YJ2XmFHsxnKSllKenFx_Sx19YE95pJL0fcMHqrQpjZ&usqp=CAU"
+                "Max",
+                "https://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252913User1.png"
             )
             val user4 = User(
                 "4",
-                "Drafter4",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRh4gY8XVZ3DP-VVm-MIcnq5Bbct7nMmX_8EerpdlXXI2asj0-I&usqp=CAU"
+                "John",
+                "https://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252913User1.png"
             )
             val user5 = User(
                 "5",
-                "Drafter5",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRh4gY8XVZ3DP-VVm-MIcnq5Bbct7nMmX_8EerpdlXXI2asj0-I&usqp=CAU"
+                "Mike",
+                "https://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252913User1.png"
             )
             val user6 = User(
                 "6",
-                "Drafter6",
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRh4gY8XVZ3DP-VVm-MIcnq5Bbct7nMmX_8EerpdlXXI2asj0-I&usqp=CAU"
+                "Vladimir",
+                "https://s1.iconbird.com/ico/0612/vistabasesoftwareicons/w256h2561339252913User1.png"
             )
             users.add(user1)
             users.add(user2)
