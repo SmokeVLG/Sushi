@@ -10,5 +10,6 @@
     <string name="x1">x1</string>
     <string name="pay">Pay</string>
     <string name="orders">Your Orders</string>
+    <string name="send_money">Отправить деньги</string>
 
 </resources>

@@ -13,11 +13,9 @@ class HomeViewModel(private val repository: HomeRepository) : ViewModel() {
         get() = _status
 
     //repository
-    val kitTypes = repository.kits
-    val items1 = repository.items1
-    val items2 = repository.items2
+
     val items3 = repository.items3
-    val cartItems = repository.cartItemsForRecView
+
 
     init {
         refreshDataFromRepository()
@@ -35,16 +33,4 @@ class HomeViewModel(private val repository: HomeRepository) : ViewModel() {
         }
     }
 
-    //onClicks
-    fun addToCart(id: Int) {
-        viewModelScope.launch {
-            repository.add(id)
-        }
-    }
-
-    fun removeFromCart(id: Int) {
-        viewModelScope.launch {
-            repository.remove(id)
-        }
-    }
 }
