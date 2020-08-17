@@ -55,7 +55,7 @@ interface CommonDao{
     fun insertAccount(item: Int)
 }
 
-@Database(entities = [DatabaseItemType1::class, DatabaseItemType2::class, DatabaseItemType3::class, DatabaseKitType::class, DatabaseCart::class, DatabaseAccount::class], version = 1)
+@Database(entities = [DatabaseItemType1::class, DatabaseItemType2::class, DatabaseItemType3::class, DatabaseKitType::class, DatabaseCart::class, DatabaseAccount::class], version = 1,exportSchema = false)
 abstract class Databases:RoomDatabase(){
     abstract val commonDao: CommonDao
 }
