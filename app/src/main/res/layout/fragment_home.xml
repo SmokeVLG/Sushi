@@ -72,7 +72,7 @@
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toBottomOf="@+id/textView32"
-                            app:listData="@{viewModel.items3}"
+                            app:listData="@{viewModel.users}"
                             app:padding="@{30}"
                             tools:listitem="@layout/grid_view_item" />
 

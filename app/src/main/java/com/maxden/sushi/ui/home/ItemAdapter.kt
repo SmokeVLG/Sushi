@@ -6,25 +6,25 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.maxden.sushi.databinding.GridViewItemBinding
-import com.maxden.sushi.model.ItemTypeModel
+import com.maxden.sushi.model.UserModel
 
-class ItemAdapter : ListAdapter<ItemTypeModel, ItemAdapter.ItemViewHolder>(DiffCallback) {
+class ItemAdapter : ListAdapter<UserModel, ItemAdapter.ItemViewHolder>(DiffCallback) {
 
 
     class ItemViewHolder(private var binding: GridViewItemBinding):
         RecyclerView.ViewHolder(binding.root) {
-        fun bind(item: ItemTypeModel) {
+        fun bind(item: UserModel) {
             binding.property = item
             binding.executePendingBindings()
         }
     }
 
-    companion object DiffCallback : DiffUtil.ItemCallback<ItemTypeModel>() {
-        override fun areItemsTheSame(oldItem: ItemTypeModel, newItem: ItemTypeModel): Boolean {
+    companion object DiffCallback : DiffUtil.ItemCallback<UserModel>() {
+        override fun areItemsTheSame(oldItem: UserModel, newItem: UserModel): Boolean {
             return oldItem === newItem
         }
 
-        override fun areContentsTheSame(oldItem: ItemTypeModel, newItem: ItemTypeModel): Boolean {
+        override fun areContentsTheSame(oldItem: UserModel, newItem: UserModel): Boolean {
             return oldItem.id == newItem.id
         }
     }

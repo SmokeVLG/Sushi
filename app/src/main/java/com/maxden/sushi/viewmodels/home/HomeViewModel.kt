@@ -5,7 +5,6 @@ import com.maxden.sushi.repository.HomeRepository
 import kotlinx.coroutines.*
 
 class HomeViewModel(private val repository: HomeRepository) : ViewModel() {
-
     //For loading screen => progress bar
     enum class ApiStatus {LOADING, DONE, ERROR}
     private val _status = MutableLiveData<ApiStatus>()
@@ -13,9 +12,7 @@ class HomeViewModel(private val repository: HomeRepository) : ViewModel() {
         get() = _status
 
     //repository
-
-    val items3 = repository.items3
-
+    val users = repository.users
 
     init {
         refreshDataFromRepository()

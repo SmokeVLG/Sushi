@@ -2,14 +2,13 @@ package com.maxden.sushi.util
 
 import android.view.View
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.maxden.sushi.R
-import com.maxden.sushi.model.ItemTypeModel
+import com.maxden.sushi.model.UserModel
 import com.maxden.sushi.ui.SpaceItemDecoration
 import com.maxden.sushi.ui.home.ItemAdapter
 import com.maxden.sushi.viewmodels.home.HomeViewModel
@@ -34,7 +33,7 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 @BindingAdapter("listData")
 fun bindRecyclerView(
     recyclerView: RecyclerView,
-    data: List<ItemTypeModel>?
+    data: List<UserModel>?
 ) {
     val adapter = recyclerView.adapter as ItemAdapter
     adapter.submitList(data)

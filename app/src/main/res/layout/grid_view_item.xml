@@ -5,7 +5,7 @@
     <data>
         <variable
             name="property"
-            type="com.maxden.sushi.model.ItemTypeModel" />
+            type="com.maxden.sushi.model.UserModel" />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
