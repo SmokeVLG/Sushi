@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
         val binding: FragmentHomeBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container,false)
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
-        binding.recyclerView3.adapter = ItemAdapter()
+        binding.rVUsers.adapter = ItemAdapter()
         return binding.root
     }
 

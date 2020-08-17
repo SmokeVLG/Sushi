@@ -9,7 +9,7 @@ fun List<User>.asDomainUserModel(): List<UserModel> {
         UserModel(
             id = it.id,
             name = it.name,
-            imgSrcUrl = it.imgSrcUrl
+            imgUserUrl = it.imgSrcUrl
         )
     }
 }

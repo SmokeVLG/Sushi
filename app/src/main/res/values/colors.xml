@@ -4,11 +4,7 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="colorBackground">#E3DFEA</color>
-    <color name="textColorPrimary">#212121</color>
-    <color name="textColorSecondary">#757575</color>
-    <color name="colorPrimaryDark2">#FFAC30</color>
+     <color name="colorYellowForButton">#FFAC30</color>
 
-    <color name="addToCart">#D21F3C</color>
-    <color name="green">#33a532</color>
-    <color name="silver">#A9A9A9</color>
+
 </resources>

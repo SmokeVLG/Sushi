@@ -22,7 +22,7 @@ class HomeViewModel(private val repository: HomeRepository) : ViewModel() {
         viewModelScope.launch {
             try {
                 _status.value = ApiStatus.LOADING
-                repository.refreshKitsAndItems()
+                repository.refreshUsers()
                 _status.value = ApiStatus.DONE
             } catch (e: Exception) {
                 _status.value = ApiStatus.ERROR

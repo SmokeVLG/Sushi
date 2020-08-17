@@ -28,9 +28,6 @@ android {
         }
     }
 
-// To inline the bytecode built with JVM target 1.8 into
-// bytecode that is being built with JVM target 1.6. (e.g. navArgs)
-
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -72,16 +69,9 @@ dependencies {
     implementation "com.squareup.moshi:moshi:$version_moshi"
     implementation "com.squareup.moshi:moshi-kotlin:$version_moshi"
 
-    // Retrofit with Moshi Converter
-    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
-    implementation "com.squareup.retrofit2:converter-moshi:$version_retrofit"
-
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_kotlin_coroutines"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_kotlin_coroutines"
-
-    // Retrofit Coroutines Support
-    implementation "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:$version_retrofit_coroutines_adapter"
 
     // Room dependency
     def room_version = "2.3.0-alpha02"

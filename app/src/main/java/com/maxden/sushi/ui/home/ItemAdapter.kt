@@ -8,10 +8,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.maxden.sushi.databinding.GridViewItemBinding
 import com.maxden.sushi.model.UserModel
 
-class ItemAdapter : ListAdapter<UserModel, ItemAdapter.ItemViewHolder>(DiffCallback) {
+class ItemAdapter : ListAdapter<UserModel, ItemAdapter.UserViewHolder>(DiffCallback) {
 
 
-    class ItemViewHolder(private var binding: GridViewItemBinding):
+    class UserViewHolder(private var binding: GridViewItemBinding):
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: UserModel) {
             binding.property = item
@@ -30,11 +30,11 @@ class ItemAdapter : ListAdapter<UserModel, ItemAdapter.ItemViewHolder>(DiffCallb
     }
 
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): ItemViewHolder {
-        return ItemViewHolder(GridViewItemBinding.inflate(LayoutInflater.from(parent.context)))
+                                    viewType: Int): UserViewHolder {
+        return UserViewHolder(GridViewItemBinding.inflate(LayoutInflater.from(parent.context)))
     }
 
-    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val item = getItem(position)
         holder.bind(item)
     }
